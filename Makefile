@@ -7,17 +7,15 @@ KERNEL=$(ROOT)/gazami
 
 include .env
 
-all: run-qemu
-
 build-gazami:
 	$(MAKE) -C $(KERNEL) build
-	cat $(KERNEL)/.*_env >> .env
+	cat $(KERNEL)/.*_env > .env
 
-build-crustlet: 
+build-crustlet: build-gazami
 	$(MAKE) -C $(BOOTLOADER) build
 	cat $(BOOTLOADER)/.*_env >> .env
 
-build: build-crustlet build-gazami
+build: build-crustlet 
 
 # Creates a FAT32 image for UEFI boot
 IMG_NAME=$(KERNEL_PACKAGE_NAME)-$(KERNEL_TRIPLE).img

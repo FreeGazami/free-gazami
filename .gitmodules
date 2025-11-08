@@ -1,0 +1,6 @@
+[submodule "gazami"]
+	path = gazami
+	url = https://github.com/FreeGazami/gazami.git
+[submodule "crustlet"]
+	path = crustlet
+	url = https://github.com/FreeGazami/crustlet.git

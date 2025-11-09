@@ -11,10 +11,10 @@ KERNEL_PATH=$(ROOT)/$(KERNEL)
 build-gazami:
 	$(MAKE) -C $(KERNEL_PATH) build
 
-build-crustlet: build-gazami
+build-crustlet:
 	$(MAKE) -C $(BOOTLOADER_PATH) build
 
-generate-meta-json: build-crustlet
+generate-meta-json: build-crustlet build-gazami
 	jq --slurpfile attribute crustlet/crustlet-build.json -n '{crustlet: $$attribute[0]}' > tmp-build.json
 	jq --slurpfile attribute gazami/gazami-build.json '. + {gazami: $$attribute[0]}' tmp-build.json > tmp-combine-build.json
 	jq '. + {image_name: (.gazami.package_name + "-" + .gazami.triple)}' tmp-combine-build.json > free-gazami-build.json

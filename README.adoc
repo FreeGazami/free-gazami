@@ -40,6 +40,7 @@ Nightly rust provides custom allocators, linker formats, and targets(bare-metal 
 
 === jq
 Used in the main Makefile to parse JSON files that carry build/meta info.
+jq is sually installed on most Linux distros by default but you should check.
 
 
 == How to build

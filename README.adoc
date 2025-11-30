@@ -31,8 +31,10 @@ configuration file for make
 
 [NOTE]
 ====
-Each time a build is run for either the kernel or bootloader, a JSON file is generated in the repo.
-This JSON file is used to pass build info (like build triple, package name, bin name, etc.) which is used in later build processes(generating disk images and variable names for running qemu).
+Each time a build is run for either the kernel or bootloader, a JSON file is generated in that repo.
+The JSON file in these repos are used to pass build info (like build triple, package name, bin name, etc.) which is used by the make process in free-gazami.
+Makefile in free-gazami uses the JSON files from the kernel and bootloader repo to generate disk image names and variable names to use when running qemu.
+I am very open to suggestions on how to improve this build system.
 ====
 
 === basic build

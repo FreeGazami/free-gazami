@@ -54,7 +54,7 @@ This builds both the kernel and bootloader
 make create-img
 ```
 
-=== build a bootable disk image, and run qemu using the bootable disk
+=== build a bootable disk image, and boot from the disk image on qemu
 This builds both the kernel and bootloader
 [source,bash]
 ```bash

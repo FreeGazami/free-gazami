@@ -26,6 +26,21 @@ Kernel repository as a submodule
 configuration file for make
 ====
 
+== Software Requirements
+
+=== Linux Host
+Any Linux distro should work.
+You'll most likely have to modify the Makefile and/or source to make things work on Windows or MacOS.
+
+=== make
+make is the build system for this project for now. (subject to change)
+
+=== Nightly Rust
+Nightly rust provides custom allocators, linker formats, and targets(bare-metal x86_64) and stuff like that.
+
+=== jq
+Used in the main Makefile to parse JSON files that carry build/meta info.
+
 
 == How to build
 

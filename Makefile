@@ -34,7 +34,7 @@ create-img: build
 	sudo mkdir -p efi_mount/EFI/BOOT
 	sudo mkdir -p efi_mount/crustlet/
 	sudo cp $(BOOTLOADER_PATH)/target/x86_64-unknown-uefi/debug/$(shell jq -r '.crustlet.bin_name' free-gazami-build.json).efi efi_mount/EFI/BOOT/BOOTX64.EFI
-	sudo cp $(BOOTLOADER_PATH)/runtime_configs/rEnv.txt efi_mount/crustlet/rEnv.txt
+	sudo cp $(BOOTLOADER_PATH)/runtime_configs/rEnv.txt efi_mount/rEnv.txt
 	sudo cp $(KERNEL_PATH)/target/x86_64-unknown-gazami/debug/gazami efi_mount/gazami
 	sudo umount efi_mount
 	rm -rf efi_mount

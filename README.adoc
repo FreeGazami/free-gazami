@@ -31,35 +31,35 @@ configuration file for make
 
 === basic build
 [source,bash]
-====
+```bash
 make build
-====
+```
 
 === build bootloader
 [source,bash]
-====
+```bash
 make build-crustlet
-====
+```
 
 === build kernel
 [source,bash]
-====
+```bash
 make build-gazami
-====
+```
 
 === build a bootable disk image
 This builds both the kernel and bootloader
 [source,bash]
-====
+```bash
 make create-img
-====
+```
 
 === build a bootable disk image, and run qemu using the bootable disk
 This builds both the kernel and bootloader
 [source,bash]
-====
+```bash
 make run-qemu
-====
+```
 
 
 == Hardware Support

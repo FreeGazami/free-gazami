@@ -1,0 +1,66 @@
+= FreeGazami
+:toc:
+:sectnums:
+
+== Repo Overview
+```txt
+.
+├── crustlet
+├── gazami
+├── Makefile
+└── README.adoc
+```
+
+* crustlet
+====
+Bootloader repository as a submodule
+====
+
+* gazami
+====
+Kernel repository as a submodule
+====
+
+* Makefile
+====
+configuration file for make
+====
+
+
+== How to build
+
+=== basic build
+[source,bash]
+====
+make build
+====
+
+=== build bootloader
+[source,bash]
+====
+make build-crustlet
+====
+
+=== build kernel
+[source,bash]
+====
+make build-gazami
+====
+
+=== build a bootable disk image
+This builds both the kernel and bootloader
+[source,bash]
+====
+make create-img
+====
+
+=== build a bootable disk image, and run qemu using the bootable disk
+This builds both the kernel and bootloader
+[source,bash]
+====
+make run-qemu
+====
+
+
+== Hardware Support
+Only #Qemu x86_64# at this moment

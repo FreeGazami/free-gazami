@@ -11,17 +11,17 @@
 └── README.adoc
 ```
 
-* crustlet
+=== crustlet
 ====
 Bootloader repository as a submodule
 ====
 
-* gazami
+=== gazami
 ====
 Kernel repository as a submodule
 ====
 
-* Makefile
+=== Makefile
 ====
 configuration file for make
 ====
@@ -29,19 +29,26 @@ configuration file for make
 
 == How to build
 
+[NOTE]
+====
+Each time a build is run for either the kernel or bootloader, a JSON file is generated in the repo.
+This JSON file is used to pass build info (like build triple, package name, bin name, etc.) which is used in later build processes.
+====
+
 === basic build
+kernel and bootloader
 [source,bash]
 ```bash
 make build
 ```
 
-=== build bootloader
+=== build the bootloader
 [source,bash]
 ```bash
 make build-crustlet
 ```
 
-=== build kernel
+=== build the kernel
 [source,bash]
 ```bash
 make build-gazami

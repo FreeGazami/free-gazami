@@ -28,6 +28,8 @@ configuration file for make
 
 == Software Requirements
 
+You'll need these tools to get started with compiling and running the kernel/bootloader on qemu.
+
 === Linux Host
 Any Linux distro should work.
 You'll most likely have to modify the Makefile and/or source to make things work on Windows or MacOS.
@@ -40,7 +42,10 @@ Nightly rust provides custom allocators, linker formats, and targets(bare-metal 
 
 === jq
 Used in the main Makefile to parse JSON files that carry build/meta info.
-jq is sually installed on most Linux distros by default but you should check.
+jq is usually installed on most Linux distros by default but you should check.
+
+=== qemu
+You'll need qemu to run `make run-qemu` build command which creates a bootable disk image and boot from it on qemu.
 
 
 == How to build
